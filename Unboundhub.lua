@@ -1,5 +1,5 @@
 -- =========================================================
---  Alex's Custom Loader (English Edition)
+--  Unbound Hub (English Edition)
 -- =========================================================
 
 local Players = game:GetService("Players")
@@ -36,7 +36,7 @@ end
 --  UI
 -- =========================================================
 local screenGui = Instance.new("ScreenGui")
-screenGui.Name = "StealAnEggLoader"
+screenGui.Name = "UnboundHubLoader"
 screenGui.ResetOnSpawn = false
 screenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 do
@@ -79,7 +79,7 @@ do
     end)
 end
 
--- Logo (change the asset ID to use your own image)
+-- Logo
 local logo = Instance.new("ImageLabel", mainFrame)
 logo.Size = UDim2.new(0, 36, 0, 36)
 logo.Position = UDim2.new(0, 18, 0, 10)
@@ -91,7 +91,7 @@ local title = Instance.new("TextLabel", mainFrame)
 title.Size = UDim2.new(1, -65, 0, 55)
 title.Position = UDim2.new(0, 60, 0, 0)
 title.BackgroundTransparency = 1
-title.Text = "Alex Hub - Steal an Egg"
+title.Text = "Unbound Hub - Steal an Egg"
 title.TextColor3 = Color3.fromRGB(240, 240, 240)
 title.Font = Enum.Font.GothamBold
 title.TextSize = 16
@@ -159,13 +159,13 @@ local function runLoader()
         local safeLoader = loadstring or load
         local fn, err = safeLoader(src)
         if not fn then
-            warn("[AlexHub] loadstring error: " .. tostring(err))
+            warn("[UnboundHub] loadstring error: " .. tostring(err))
             return
         end
 
         local ok, err2 = pcall(fn)
         if not ok then
-            warn("[AlexHub] runtime error: " .. tostring(err2))
+            warn("[UnboundHub] runtime error: " .. tostring(err2))
         end
     end)
 end
